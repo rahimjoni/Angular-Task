@@ -1,37 +1,32 @@
-Technology :                                                                                                                                             
-Backend : Php(Laravel)                                                                                                                             
-Frontend : Angular 10                                                                                                                                         
-Database : mySql                                                                                                                    
+Used Technology :                                                                                                                                             
+                                                                                                                                         
+DB : mySql  
+Admin : Php(Laravel)                                                                                                                             
+Website : Angular 10
 
-Backend Installation process :
+Installation Guide Line :
 
 Step 1 : Install Composer.exe 
-Download Link : https://getcomposer.org/download/
-
-Step 2 : git clone https://github.com/Iftakharalamrizve/Assesment-Project.git
-
-Step 3 : cd backend then run  composer install (For install php depedencies )
+Step 2 : git clone https://github.com/rahimjoni/Angular-Task.git
+Step 3 : cd backend then run  composer update
 Step 4 : cp .env.example .env
-Step 5 : Set Database credential 
-
-DB_DATABASE=xxxxxxx                                 
-DB_USERNAME=xxxxx                                                                                                 
-DB_PASSWORD=
+Step 5 : Set DB credential 
+         DB_DATABASE=your_db_name                                 
+         DB_USERNAME=your_user_name                                                                                                 
+         DB_PASSWORD=your_password
 
 Step 6 : Email Configuration setup 
-
-MAIL_MAILER=smtp                                                                                                         
-MAIL_HOST=smtp.mailtrap.io                                                                                                                                   
-MAIL_PORT=2525                                                                                                                                
-MAIL_USERNAME=null                                                                                                                       
-MAIL_PASSWORD=null                                                                                                                
-MAIL_ENCRYPTION=null                                                                                                              
-MAIL_FROM_ADDRESS=null                                                                                                                   
-MAIL_FROM_NAME="${APP_NAME}" 
-
+         MAIL_MAILER=smtp                                                                                                         
+         MAIL_HOST=smtp.mailtrap.io                                                                                                                                   
+         MAIL_PORT=2525                                                                                                                                
+         MAIL_USERNAME=null                                                                                                                       
+         MAIL_PASSWORD=null                                                                                                                
+         MAIL_ENCRYPTION=null                                                                                                              
+         MAIL_FROM_ADDRESS=null                                                                                                                   
+         MAIL_FROM_NAME="${APP_NAME}" 
 Step 7 : php artisan serve
 
-Frontend Installation Process :
+Website Installation Guide Line :
 
 Step 1 : cd frontend                                                                                                            
 Step 2 : npm install                                                                                                          
