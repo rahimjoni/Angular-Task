@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-2">
+        <h5>Salary List</h5>
+    </div>
+    <div class="col-md-8"></div>
+    <div class="col-md-2">
+        <a routerLink="add" class="btn btn-sm btn-success mb-2 " style="float:right"><i class="fa fa-plus-square"></i> Add new</a>
+    </div>
+</div>
+<table class="table table-sm table-bordered table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th style="width: 20%">Name</th>
+            <th style="width: 10%">Email</th>
+            <th style="width: 10%">Mobile</th>
+            <th style="width: 20%">Basic Salary</th>
+            <th style="width: 30%">House Rent</th>
+            <th style="width: 30%">Medical</th>
+            <th style="width: 30%">Tax</th>
+            <th style="width: 40%">Monthly Salary</th>
+            <th style="width: 20%;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeList">
+
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.mobile}}</td>
+            <td>{{employee.basic_salary}}</td>
+            <td>{{employee.house_rent}}</td>
+            <td>{{employee.medical}}</td>
+            <td>{{employee.tax}}</td>
+            <td>{{employee.monthlysalary}}</td>
+            <td style="white-space: nowrap">
+                <a routerLink="edit/{{employee.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
+                <button (click)="deleteEmployee(employee.id)" class="btn btn-sm btn-danger btn-delete-user"
+                    [disabled]="employee.isDeleting">
+                    <span *ngIf="employee.isDeleting" class="spinner-border spinner-border-sm"></span>
+                    <span *ngIf="!employee.isDeleting">Delete</span>
+                </button>
+            </td>
+        </tr>
+        <tr *ngIf="employeeList==null || employeeList.length<1">
+            <td colspan="8" class="text-center">
+                <span class=" align-center">No Data Available</span>
+            </td>
+        </tr>
+    </tbody>
+</table>

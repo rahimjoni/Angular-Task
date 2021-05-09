@@ -1,0 +1,73 @@
+<h5 *ngIf="isAddMode">Add Employee</h5>
+<h5 *ngIf="!isAddMode">Edit Employee</h5>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col">
+            <label for="name"> Name</label>
+            <input type="text" formControlName="name" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                <div *ngIf="f.name.errors.required">Name is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label>Email</label>
+            <input type="text" formControlName="email" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            <label for="mobile">Mobile</label>
+            <input type="text" formControlName="mobile" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }" />
+            <div *ngIf="submitted && f.mobile.errors" class="invalid-feedback">
+                <div *ngIf="f.mobile.errors.required">mobile is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label>Basic Salary</label>
+            <input type="text" formControlName="basic_salary" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.basic_salary.errors }" />
+            <div *ngIf="submitted && f.basic_salary.errors" class="invalid-feedback">
+                <div *ngIf="f.basic_salary.errors.required">Basic Salary is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col">
+            <label>House Rent</label>
+            <input type="text" formControlName="house_rent" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.house_rent.errors }" />
+            <div *ngIf="submitted && f.house_rent.errors" class="invalid-feedback">
+                <div *ngIf="f.house_rent.errors.required">House Rent is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label>Medical</label>
+            <input type="text" formControlName="medical" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.medical.errors }" />
+            <div *ngIf="submitted && f.medical.errors" class="invalid-feedback">
+                <div *ngIf="f.medical.errors.required">Medical Fund is required</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label>Tax</label>
+            <input type="text" formControlName="tax" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.tax.errors }" />
+            <div *ngIf="submitted && f.tax.errors" class="invalid-feedback">
+                <div *ngIf="f.tax.errors.required">Tax  is required</div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Create
+        </button>
+        <a routerLink="../login" class="btn btn-link">Cancel</a>
+    </div>
+</form>
