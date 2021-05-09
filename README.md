@@ -7,10 +7,13 @@ Website : Angular 10
 Installation Guide Line :
 
 Step 1 : Install Composer.exe 
+
 Step 2 : git clone https://github.com/rahimjoni/Angular-Task.git
 
 Step 3 : cd backend then run  composer update
+
 Step 4 : cp .env.example .env
+
 Step 5 : Set DB credential 
          DB_DATABASE=your_db_name                                 
          DB_USERNAME=your_user_name                                                                                                 
